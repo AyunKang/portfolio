@@ -132,6 +132,15 @@ button {
   background-color: var(--color-dark-beige);
 }
 
+.navbar__toggle-btn {
+  color: var(--color-white);
+  font-size: 24px;
+  position: absolute;
+  right: 30px;
+  top: 22px;
+  display: none;
+}
+
 /* Home */
 #home {
   background: url('imgs/배경\ 후보2.png') center/cover no-repeat;
@@ -410,8 +419,6 @@ button {
 
 .testimonial {
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 32px 0;
 }
 
@@ -434,7 +441,6 @@ button {
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
   height: 100%;
-  max-width: 1200px;
   margin: 0 15px;
   display: flex;
   flex-direction: column;
@@ -495,5 +501,51 @@ button {
 .contact__rights {
   color: var(--color-light-white);
   font-size: var(--font-micro);
-  margin-top: 20px;
+  margin-top: 5px;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    display: none;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .about__jobs {
+    margin-top: -20px;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contact__title {
+    margin-top: 5px;
+  }
+
+  .contact__rights {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
 }
