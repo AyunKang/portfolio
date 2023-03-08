@@ -70,7 +70,7 @@ h2 {
 
 h3 {
   font-size: var(--font-regular);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
 }
@@ -174,6 +174,10 @@ button {
 }
 
 /* About */
+#about {
+  margin-bottom: 20px;
+}
+
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -308,13 +312,13 @@ button {
 }
 
 .category__btn.active,
-.work__categories :hover {
+.category__btn:hover {
   background-color: var(--color-dark-beige);
   color: var(--color-white);
 }
 
 .category__btn.active .category__count,
-.work__categories :hover .category__count {
+.category__btn:hover .category__count {
   opacity: 1;
   top: 0;
 }
@@ -392,4 +396,104 @@ button {
 
 .project__description h3 {
   color: var(--color-white);
+}
+
+/* Testimonial */
+
+#test {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 30px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.testimonial__avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
+}
+
+.testimonial__name {
+  margin-top: 10px;
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-beige);
+  padding-bottom: 30px;
+}
+
+.contact__title,
+.contact__email,
+.contact__links {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+.contact__email {
+  margin: 20px 10px;
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links a {
+  margin: 0 5px;
+}
+
+.contact__links i:hover {
+  color: var(--color-yellow);
+  transform: scale(1.1);
+  transform: translateY(-5px);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.contact__rights {
+  color: var(--color-light-white);
+  font-size: var(--font-micro);
+  margin-top: 20px;
 }
