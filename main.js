@@ -18,8 +18,17 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-
-  console.log(link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+  scrollIntoView(link);
 });
+
+// Handle click on "contact me" button on home
+const contactbtn = document.querySelector('.home__contact');
+contactbtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+// 겹치는 부분 scrollIntoView 함수로 만들기
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
