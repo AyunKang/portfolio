@@ -88,6 +88,7 @@ button {
   outline: none;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
+  padding: 0;
 }
 
 /* Navbar */
@@ -118,16 +119,21 @@ button {
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__logo__img {
-  width: 35px;
-  height: 35px;
+.navbar__logo a {
   position: relative;
-  top: 7px;
+  top: -6px;
+}
+.navbar__logo__img {
+  width: 38px;
+  height: 38px;
+  position: relative;
+  top: 5px;
   left: 5px;
+  margin-right: 5px;
 }
 
 .navbar__menu__item {
-  font-size: var(--font-regular);
+  font-size: 20px;
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
@@ -152,8 +158,7 @@ button {
 /* Home */
 #home {
   background: url('imgs/배경\ 후보2.png') center/cover no-repeat;
-  padding: 40px;
-  padding-top: 120px;
+  padding: 150px 40px;
   text-align: center;
   transition: all var(--animation-duration) ease-in;
 }
@@ -180,6 +185,10 @@ button {
   font-weight: var(--weight-bold);
 }
 
+.home__contact:hover {
+  background-color: var(--color-orange);
+}
+
 /* Section common */
 .section {
   padding: 50px;
@@ -194,13 +203,19 @@ button {
 
 /* About */
 #about {
-  margin-bottom: 20px;
+  padding: 125px;
+}
+
+#about .section__container {
+  align-content: center;
+  justify-items: 0 center;
 }
 
 .about__majors {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: 40px 0;
+  padding-top: 20px;
 }
 
 .major__icon {
@@ -231,6 +246,10 @@ button {
 
 .major__descriptions {
   font-size: var(--font-small);
+}
+
+.about__jobs {
+  padding-top: 20px;
 }
 
 .job {
@@ -265,6 +284,8 @@ button {
 
 #skills {
   background-color: var(--color-yellow);
+  padding-bottom: 120px;
+  padding-top: 110px;
 }
 
 .skillset {
@@ -319,15 +340,19 @@ button {
 }
 
 /* Work */
+#work {
+  padding: 125px 0;
+}
 .work__categories {
   margin: 40px;
 }
 
 .category__btn {
+  position: relative;
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 30px 8px 48px;
+  padding: 8px 48px;
 }
 
 .category__btn.selected,
@@ -346,14 +371,15 @@ button {
   border-radius: 50%;
   background-color: var(--color-orange);
   color: var(--color-white);
+  position: absolute;
   width: 24px;
   height: 24px;
   display: inline-block;
   line-height: 24px;
   margin-left: 5px;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: 4px;
+  right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-out;
 }
@@ -432,6 +458,7 @@ button {
 
 #test {
   background-color: var(--color-light-white);
+  padding: 150px 0;
 }
 
 .testimonials {
@@ -548,9 +575,32 @@ button {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  /* Font size
+  --font-large: 30px;
+  --font-medium: 18px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px; */
+
+  .home__title {
+    font-size: 45px;
+  }
+  .home__descriptions {
+    font-size: 30px;
+  }
+
+  #home {
+    padding: 120px 40px;
+    padding-bottom: 80px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 20x;
+    right: 16px;
+    font-size: 24px;
   }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -567,24 +617,76 @@ button {
     display: block;
   }
 
+  #about {
+    padding: 16px;
+    padding-top: 60px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .about__jobs {
-    margin-top: -20px;
+    margin-top: 5px;
   }
+
+  #skills {
+    padding: 16px;
+    padding-top: 55px;
+  }
+
   .skillset {
     flex-direction: column;
   }
+
+  #work {
+    padding: 16px;
+    padding-bottom: 50px;
+    padding-top: 55px;
+  }
+
+  .category__btn {
+    margin: 4px 0;
+    width: 100%;
+  }
+
   .project {
     flex-grow: 1;
   }
+
+  .work__projects {
+    padding: 0 20px;
+  }
+
+  #test {
+    padding: 16px;
+    padding-top: 55px;
+  }
+
+  .testimonial {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px 0;
+  }
+
   .testimonial__avatar {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .testimonial__speech-bubble {
+    order: 1;
   }
 
   .contact__title {
@@ -598,8 +700,10 @@ button {
 
   .arrow-up {
     font-size: 30px;
-    width: 45px;
-    height: 45px;
-    right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
