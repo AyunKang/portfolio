@@ -523,7 +523,7 @@ button {
   right: 50px;
   width: 70px;
   height: 70px;
-  font-size: 50px;
+  font-size: 45px;
   color: var(--color-white);
   background-color: var(--color-pink);
   border-radius: 50%;
@@ -580,5 +580,12 @@ button {
   .contact__rights {
     margin-top: 0;
     margin-bottom: 25px;
+  }
+
+  .arrow-up {
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    right: 20px;
   }
 }
