@@ -106,7 +106,7 @@ button {
 
 #navbar.navbar--dark {
   background-color: var(--color-beige);
-  padding: 5px;
+  padding: 16px;
 }
 
 .navbar__menu {
@@ -414,18 +414,18 @@ button {
 
 .project__description h3:after {
   content: '';
-  width: 25px;
+  width: 50px;
   height: 2px;
   display: block;
   position: relative;
   left: 50%;
-  margin-left: -12px;
+  transform: translateX(-50%);
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 
 /* Testimonial */
@@ -554,6 +554,7 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-beige);
   }
   .navbar__menu {
     flex-direction: column;
@@ -562,6 +563,10 @@ button {
     margin-top: 5px;
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
+
   .about__majors {
     flex-direction: column;
   }
